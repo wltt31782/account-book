@@ -21,10 +21,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:dev": "REACT_APP_ENV=dev npm run _start",
+    "start:prod": "REACT_APP_ENV=prod npm run _start",
+    "deploy:dev": "REACT_APP_ENV=dev npm run _deploy",
+    "deploy:prod": "REACT_APP_ENV=prod npm run _deploy",
+    "_start": "sh -ac '. .env.${REACT_APP_ENV}; craco start'",
+    "_deploy": "sh -ac '. .env.${REACT_APP_ENV}; craco build && firebase use ${REACT_APP_ENV} && firebase deploy --only hosting:${REACT_APP_ENV}'"
   },
   "eslintConfig": {
     "extends": [

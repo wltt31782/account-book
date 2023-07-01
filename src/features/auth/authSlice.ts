@@ -1,7 +1,6 @@
-import { createSlice, Dispatch, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { User } from 'firebase/auth';
 import { AuthState } from '@/types/models';
-import { auth } from '@/configs/firebase';
 
 const initAuthState: AuthState = {
   user: null,

@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "jest",
-    "eject": "react-scripts eject",
+    "eject": "react-scripts   eject",
     "start:dev": "cross-env REACT_APP_ENV=dev npm run _start",
     "start:prod": "cross-env REACT_APP_ENV=prod npm run _start",
     "deploy:dev": "cross-env REACT_APP_ENV=dev npm run _deploy",
